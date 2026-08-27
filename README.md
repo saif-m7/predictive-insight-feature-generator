@@ -4,7 +4,7 @@
 
 A modular Python feature engineering pipeline that transforms the sanitized customer Sales & Marketing dataset from Week 1 into a machine-learning-ready feature matrix.
 
-The pipeline performs correlation analysis, correlation-driven feature synthesis, categorical encoding, numerical feature scaling, and feature matrix generation.
+The pipeline performs correlation analysis, correlation-driven feature synthesis, date feature engineering, categorical encoding, numerical feature scaling, and feature matrix generation.
 
 ---
 
@@ -172,8 +172,7 @@ predictive-insight-feature-generator/
 │
 ├── data/
 │   ├── cleaned_dataset.csv
-│   ├── feature_engineered_dataset.csv
-│   └── target_churn.csv
+│   └── feature_engineered_dataset.csv
 │
 ├── outputs/
 │   ├── figures/
@@ -191,6 +190,7 @@ predictive-insight-feature-generator/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 Technologies
 Python 3.10
 Pandas
@@ -229,9 +229,9 @@ python src/features.py
 The pipeline generates:
 
 Feature-engineered dataset → data/feature_engineered_dataset.csv
-Target variable → data/target_churn.csv
 Correlation report → outputs/reports/feature_correlations.csv
 Correlation heatmap → outputs/figures/correlation_heatmap.png
+
 Google Colab
 
 The complete feature engineering pipeline has been executed in Google Colab with visible outputs demonstrating:
@@ -247,9 +247,9 @@ Numerical scaling
 Matrix shape comparison
 Scaling validation
 Output generation
-Google Colab Notebook
 
-Open the Google Colab Notebook
+Google Colab Notebook
+https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing
 
 Engineering Validation
 
@@ -264,6 +264,7 @@ Raw dates are not individually one-hot encoded, avoiding unnecessary dimensional
 Feature transformations are modular and repeatable.
 All 15,000 records are preserved.
 Correlation reports and visualizations are automatically generated.
+
 Conclusion
 
 The Predictive Insight Feature Generator successfully transforms the Week 1 sanitized dataset into a machine-learning-ready numerical feature matrix.
