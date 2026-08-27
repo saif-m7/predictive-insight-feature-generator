@@ -61,7 +61,7 @@ These relationships were used to guide the selection of variables for feature sy
 Two calculated ratio features were engineered based on the observed relationships in the dataset.
 
 ### 1. Spending Per Visit
-
+```text
 Formula:
 
 ```text
