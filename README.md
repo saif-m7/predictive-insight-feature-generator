@@ -99,9 +99,11 @@ The pipeline creates:
 
 Signup year
 Signup month
+Signup day
 Signup day of week
 Last purchase year
 Last purchase month
+Last purchase day
 Last purchase day of week
 Customer tenure in days
 
@@ -190,7 +192,6 @@ predictive-insight-feature-generator/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
 Technologies
 Python 3.10
 Pandas
@@ -211,6 +212,9 @@ seaborn
 scikit-learn
 How to Run Locally
 1. Clone the Repository
+
+GitHub Repository
+
 git clone https://github.com/saif-m7/predictive-insight-feature-generator.git
 2. Navigate to the Project
 cd predictive-insight-feature-generator
@@ -231,7 +235,6 @@ The pipeline generates:
 Feature-engineered dataset → data/feature_engineered_dataset.csv
 Correlation report → outputs/reports/feature_correlations.csv
 Correlation heatmap → outputs/figures/correlation_heatmap.png
-
 Google Colab
 
 The complete feature engineering pipeline has been executed in Google Colab with visible outputs demonstrating:
@@ -247,9 +250,9 @@ Numerical scaling
 Matrix shape comparison
 Scaling validation
 Output generation
-
 Google Colab Notebook
-https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing
+
+Open the Google Colab Notebook
 
 Engineering Validation
 
@@ -264,7 +267,6 @@ Raw dates are not individually one-hot encoded, avoiding unnecessary dimensional
 Feature transformations are modular and repeatable.
 All 15,000 records are preserved.
 Correlation reports and visualizations are automatically generated.
-
 Conclusion
 
 The Predictive Insight Feature Generator successfully transforms the Week 1 sanitized dataset into a machine-learning-ready numerical feature matrix.
