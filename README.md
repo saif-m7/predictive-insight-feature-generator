@@ -247,9 +247,9 @@ Numerical scaling
 Matrix shape comparison
 Scaling validation
 Output generation
-Colab Notebook
+### Google Colab Notebook
 
-Open the Google Colab Notebook https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing
+[Open the Google Colab Notebook](https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing)
 
 Engineering Validation
 
