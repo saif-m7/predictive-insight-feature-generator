@@ -61,115 +61,133 @@ These relationships were used to guide the selection of variables for feature sy
 Two calculated ratio features were engineered based on the observed relationships in the dataset.
 
 ### 1. Spending Per Visit
-```text
+
 Formula:
 
-```text
-spending_per_visit = total_spent / total_visits
+`spending_per_visit = total_spent / total_visits`
 
 This feature measures customer spending intensity relative to the number of customer visits.
 
-Correlation with churn:
+Correlation with `churn`:
 
--0.150776
+`-0.150776`
 
 The negative correlation indicates that higher spending per visit is associated with lower churn in this dataset.
 
-2. Support Burden
+### 2. Support Burden
 
 Formula:
 
-support_burden = support_tickets / total_visits
+`support_burden = support_tickets / total_visits`
 
 This feature measures the relative level of customer support interaction compared with customer activity.
 
-Correlation with churn:
+Correlation with `churn`:
 
-0.106530
+`0.106530`
 
 The positive correlation indicates that higher support burden is associated with higher churn in this dataset.
 
 Both features are generated programmatically and can be reproduced automatically for new datasets following the same schema.
 
-Date Feature Engineering
+---
+
+## Date Feature Engineering
 
 Raw date columns are transformed into meaningful numerical features instead of being one-hot encoded individually.
 
 The pipeline creates:
 
-Signup year
-Signup month
-Signup day
-Signup day of week
-Last purchase year
-Last purchase month
-Last purchase day
-Last purchase day of week
-Customer tenure in days
+- Signup year
+- Signup month
+- Signup day
+- Signup day of week
+- Last purchase year
+- Last purchase month
+- Last purchase day
+- Last purchase day of week
+- Customer tenure in days
 
 Customer tenure is calculated as:
 
-customer_tenure_days = last_purchase_date - signup_date
+`customer_tenure_days = last_purchase_date - signup_date`
 
 The original date columns are removed after transformation to avoid unnecessary dimensionality growth.
 
-Categorical Encoding
+---
 
-Categorical variables are converted into numerical representations using Scikit-learn's OneHotEncoder.
+## Categorical Encoding
+
+Categorical variables are converted into numerical representations using Scikit-learn's `OneHotEncoder`.
 
 The encoder uses:
 
-handle_unknown="ignore"
+`handle_unknown="ignore"`
 
 This allows the transformation pipeline to handle previously unseen categories without failing.
 
 Categorical variables include:
 
-Gender
-Country
-City
-Acquisition channel
-Device type
-Subscription type
-Coupon code
-Payment method
-Numerical Feature Scaling
+- Gender
+- Country
+- City
+- Acquisition channel
+- Device type
+- Subscription type
+- Coupon code
+- Payment method
 
-Numerical features are standardized using StandardScaler.
+---
+
+## Numerical Feature Scaling
+
+Numerical features are standardized using `StandardScaler`.
 
 The Z-score formula is:
 
-z = (x - μ) / σ
+`z = (x - μ) / σ`
 
 where:
 
-x = original feature value
-μ = feature mean
-σ = feature standard deviation
+- `x` = original feature value
+- `μ` = feature mean
+- `σ` = feature standard deviation
 
 Scaling validation confirmed that the transformed numerical features have:
 
-Mean ≈ 0
-Standard deviation ≈ 1
-Matrix Transformation
+- Mean ≈ 0
+- Standard deviation ≈ 1
+
+---
+
+## Matrix Transformation
 
 The feature transformation produced the following results:
 
-Transformation Stage	Matrix Shape
-Original Dataset	15,000 × 30
-After Date Feature Engineering	15,000 × 37
-After Correlation-Driven Feature Synthesis	15,000 × 39
-Final Encoded & Scaled Feature Matrix	15,000 × 61
+| Transformation Stage | Matrix Shape |
+|---|---:|
+| Original Dataset | 15,000 × 30 |
+| After Date Feature Engineering | 15,000 × 37 |
+| After Correlation-Driven Feature Synthesis | 15,000 × 39 |
+| Final Encoded & Scaled Feature Matrix | 15,000 × 61 |
 
 All 15,000 customer records were preserved throughout the transformation process.
 
 The final feature matrix contains only numerical values and is ready for downstream machine learning algorithms.
 
-Correlation Heatmap
+---
+
+## Correlation Heatmap
 
 The pipeline generates a Pearson correlation heatmap to visualize relationships among numerical features.
 
-Project Structure
+![Correlation Heatmap](outputs/figures/correlation_heatmap.png)
+
+---
+
+## Project Structure
+
+```text
 predictive-insight-feature-generator/
 │
 ├── data/
@@ -192,6 +210,7 @@ predictive-insight-feature-generator/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 Technologies
 Python 3.10
 Pandas
