@@ -183,34 +183,32 @@ The pipeline generates a Pearson correlation heatmap to visualize relationships 
 
 ![Correlation Heatmap](outputs/figures/correlation_heatmap.png)
 
----
-
 ## Project Structure
 
-predictive-insight-feature-generator/
-│
-├── data/
-│   ├── cleaned_dataset.csv
-│   └── feature_engineered_dataset.csv
-│
-├── outputs/
-│   ├── figures/
-│   │   └── correlation_heatmap.png
-│   │
-│   └── reports/
-│       └── feature_correlations.csv
-│
-├── src/
-│   └── features.py
-│
-├── notebooks/
-│   └── Week2_Predictive_Insight_Feature_Generator_ipynb.ipynb
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
+    predictive-insight-feature-generator/
+    │
+    ├── data/
+    │   ├── cleaned_dataset.csv
+    │   └── feature_engineered_dataset.csv
+    │
+    ├── outputs/
+    │   ├── figures/
+    │   │   └── correlation_heatmap.png
+    │   │
+    │   └── reports/
+    │       └── feature_correlations.csv
+    │
+    ├── src/
+    │   └── features.py
+    │
+    ├── notebooks/
+    │   └── Week2_Predictive_Insight_Feature_Generator_ipynb.ipynb
+    │
+    ├── requirements.txt
+    ├── .gitignore
+    └── README.md
 
----
+
 
 ## Technologies
 
