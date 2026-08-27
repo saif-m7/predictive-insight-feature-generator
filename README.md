@@ -187,7 +187,6 @@ The pipeline generates a Pearson correlation heatmap to visualize relationships 
 
 ## Project Structure
 
-```text
 predictive-insight-feature-generator/
 │
 ├── data/
@@ -211,16 +210,22 @@ predictive-insight-feature-generator/
 ├── .gitignore
 └── README.md
 
-Technologies
-Python 3.10
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Seaborn
-Google Colab
-Git & GitHub
-Dependencies
+---
+
+## Technologies
+
+- Python 3.10
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Google Colab
+- Git & GitHub
+
+---
+
+## Dependencies
 
 The required Python packages are listed in requirements.txt:
 
@@ -229,64 +234,92 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-How to Run Locally
-1. Clone the Repository
 
-GitHub Repository
+---
+
+## How to Run Locally
+
+### 1. Clone the Repository
+
+GitHub Repository:
+
+https://github.com/saif-m7/predictive-insight-feature-generator.git
 
 git clone https://github.com/saif-m7/predictive-insight-feature-generator.git
-2. Navigate to the Project
+
+### 2. Navigate to the Project
+
 cd predictive-insight-feature-generator
-3. Create a Virtual Environment
+
+### 3. Create a Virtual Environment
+
 python -m venv venv
-4. Activate the Virtual Environment
+
+### 4. Activate the Virtual Environment
 
 Windows PowerShell:
 
 .\venv\Scripts\Activate.ps1
-5. Install Dependencies
+
+### 5. Install Dependencies
+
 pip install -r requirements.txt
-6. Run the Feature Engineering Pipeline
+
+### 6. Run the Feature Engineering Pipeline
+
 python src/features.py
 
 The pipeline generates:
 
-Feature-engineered dataset → data/feature_engineered_dataset.csv
-Correlation report → outputs/reports/feature_correlations.csv
-Correlation heatmap → outputs/figures/correlation_heatmap.png
-Google Colab
+- Feature-engineered dataset → data/feature_engineered_dataset.csv
+- Correlation report → outputs/reports/feature_correlations.csv
+- Correlation heatmap → outputs/figures/correlation_heatmap.png
+
+---
+
+## Google Colab
 
 The complete feature engineering pipeline has been executed in Google Colab with visible outputs demonstrating:
 
-Week 1 dataset loading
-Dataset inspection
-Pearson correlation analysis
-Correlation heatmap
-Feature synthesis
-Engineered feature validation
-One-hot encoding
-Numerical scaling
-Matrix shape comparison
-Scaling validation
-Output generation
-Google Colab Notebook
+- Week 1 dataset loading
+- Dataset inspection
+- Pearson correlation analysis
+- Correlation heatmap
+- Feature synthesis
+- Engineered feature validation
+- One-hot encoding
+- Numerical scaling
+- Matrix shape comparison
+- Scaling validation
+- Output generation
 
-Open the Google Colab Notebook
+### Google Colab Notebook
 
-Engineering Validation
+https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing
+
+Open the Google Colab Notebook:
+
+https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing
+
+---
+
+## Engineering Validation
 
 The pipeline satisfies the Week 2 engineering requirements:
 
-Correlation analysis is performed programmatically.
-Two calculated domain features are generated programmatically.
-Categorical variables are encoded using OneHotEncoder.
-Numerical variables are standardized using StandardScaler.
-Date values are transformed into meaningful features.
-Raw dates are not individually one-hot encoded, avoiding unnecessary dimensionality growth.
-Feature transformations are modular and repeatable.
-All 15,000 records are preserved.
-Correlation reports and visualizations are automatically generated.
-Conclusion
+- Correlation analysis is performed programmatically.
+- Two calculated domain features are generated programmatically.
+- Categorical variables are encoded using OneHotEncoder.
+- Numerical variables are standardized using StandardScaler.
+- Date values are transformed into meaningful features.
+- Raw dates are not individually one-hot encoded, avoiding unnecessary dimensionality growth.
+- Feature transformations are modular and repeatable.
+- All 15,000 records are preserved.
+- Correlation reports and visualizations are automatically generated.
+
+---
+
+## Conclusion
 
 The Predictive Insight Feature Generator successfully transforms the Week 1 sanitized dataset into a machine-learning-ready numerical feature matrix.
 
