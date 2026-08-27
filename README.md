@@ -66,6 +66,7 @@ Formula:
 
 ```text
 spending_per_visit = total_spent / total_visits
+
 This feature measures customer spending intensity relative to the number of customer visits.
 
 Correlation with churn:
@@ -106,8 +107,7 @@ Customer tenure in days
 
 Customer tenure is calculated as:
 
-customer_tenure_days =
-last_purchase_date - signup_date
+customer_tenure_days = last_purchase_date - signup_date
 
 The original date columns are removed after transformation to avoid unnecessary dimensionality growth.
 
@@ -186,7 +186,7 @@ predictive-insight-feature-generator/
 │   └── features.py
 │
 ├── notebooks/
-│   └── Week2_Predictive_Insight_Feature_Generator.ipynb
+│   └── Week2_Predictive_Insight_Feature_Generator_ipynb.ipynb
 │
 ├── requirements.txt
 ├── .gitignore
@@ -247,9 +247,9 @@ Numerical scaling
 Matrix shape comparison
 Scaling validation
 Output generation
-### Google Colab Notebook
+Google Colab Notebook
 
-[Open the Google Colab Notebook](https://colab.research.google.com/drive/1769xlYnXPX5NsqOv9MgJBflDEBHXNHzt?usp=sharing)
+Open the Google Colab Notebook
 
 Engineering Validation
 
